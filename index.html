@@ -1,3 +1,6 @@
-`<!DOCTYPE html>` `<html lang="es">` `<head>` `<meta charset="UTF-8">`
-`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-<title>Contacto</title> </head> <body> <h1>Mi contacto</h1> <p>Esta página funciona.</p></body></html>.
+<!doctype html>. html lang="es">. head>. meta charset="UTF-8">. meta name="viewport" content="width=device-width, initial-scale=1.0">. title>Contacto NFC - Ariana Quinde</title>. /head>. body>. h1>Ariana Quinde, abogada</h1>. p>Tel: 099 404 0370 /p>. button id="add-contact">Añadir a contactos</button>. script. document .getElementById("add-contact").addEventListener("click", () => { const vcard =
+"BEGIN:VCARD\r\n" +
+"VERSION: 3.0\r\n" +
+"FN:Ariana Quinde\r\n" +
+"N:Quinde;Ariana;;;;. "ORG:Abogada\r\n" "+593994040370\r\n" +
+"END:VCARD\r\n"; const blob = new Blob(, { type: "text/vcard;charset=utf-8" }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = "Ariana-Quinde.vcf"; document.body.appendChild(link); link.click(); document.body.removeChild(link); setTimeout(() => { URL.revoke Object URL (url); }, 1000);. /script>. /body>. /html>.
